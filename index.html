@@ -23,20 +23,34 @@
 
       body {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
         margin: 0;
+        font-family: 'Inter', sans-serif;
       }
 
-      #nope,
-      #yup {
-        font-family: Inter;
+      .title {
+        margin-top: 2em;
+        font-size: 1.5em;
+        text-align: center;
+      }
+
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+      }
+
+      .is-it {
         font-size: 5em;
         display: none;
       }
     </style>
-    <h1 id="nope">Nope.</h1>
-    <h1 id="yup">Yep.</h1>
+    <h1 class="title">Is it G&A team building yet?</h1>
+    <main class="main">
+      <h2 class="is-it" id="nope">Nope.</h2>
+      <h2 class="is-it" id="yup">Yep.</h2>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
     <script>
       function isItGAndATeamBuildingYet() {
